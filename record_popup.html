@@ -1,0 +1,117 @@
+<html><head>
+        <title>g'Lish Media Player</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="vender/node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="vender/johndyer-mediaelement/build/mediaelementplayer.min.css">
+        <link rel="stylesheet" type="text/css" href="vender/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/modal-header.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <!-- Main container -->
+        <div class="wrapper">
+            <div class="container-fluid">
+                <div class="panel panel-default">
+
+                    <div class="panel-heading">Record</div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-xs-3  text-center">
+                                <button class="btn btn-success" onclick="playRepeatSound();">
+                                    <i class="fa fa-volume-up fa-4x" aria-hidden="true"></i>
+                                </button>
+
+
+                                <div id="show-image-record"> </div>
+
+                            </div>
+                            <div class="col-xs-9">
+                                <canvas id="level" height="100" width="400"></canvas>
+                            </div>
+                            <div class="" id="sound-download" style="display: none;">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="panel-footer">
+                        <div class="pull-left"><audio controls id="audio"></audio></div>
+                        <button type="button" class="btn btn-primary" id="record">
+                            <i class="fa fa-microphone" aria-hidden="true"></i> Pratice
+                        </button>
+                        <button type="button" class="btn btn-danger disabled one" id="play"> <i class="fa fa-play" aria-hidden="true"></i> Listening</button>
+                        <button type="button" class="btn btn-success disabled one" id="download"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div id="showaudio"></div>
+            <div id="show-acitve-audio"></div>
+            <script type="text/javascript" src="vender/node_modules/jquery/dist/jquery.min.js"></script>
+            <script type="text/javascript" src="vender/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+            <script type="text/javascript" src="vender/johndyer-mediaelement/build/mediaelementplayer.min.js"></script>
+
+            <script type="text/javascript" src="vender/Francium-voice-master/src/recorder.js"></script>
+            <script type="text/javascript" src="vender/Francium-voice-master/src/Fr.voice.js"></script>
+            <script type="text/javascript" src="vender/Francium-voice-master/js/app.js"></script>
+            <script type="text/javascript" src="js/app.script.js"></script>
+
+        </div>
+        <script type="text/javascript" >
+                                    function getURLParameters(paramName)
+                                    {
+                                        var sURL = window.document.URL.toString();
+                                        if (sURL.indexOf("?") > 0)
+                                        {
+                                            var arrParams = sURL.split("?");
+                                            var arrURLParams = arrParams[1].split("&");
+                                            var arrParamNames = new Array(arrURLParams.length);
+                                            var arrParamValues = new Array(arrURLParams.length);
+
+                                            var i = 0;
+                                            for (i = 0; i < arrURLParams.length; i++)
+                                            {
+                                                var sParam = arrURLParams[i].split("=");
+                                                arrParamNames[i] = sParam[0];
+                                                if (sParam[1] != "")
+                                                    arrParamValues[i] = unescape(sParam[1]);
+                                                else
+                                                    arrParamValues[i] = "";
+                                            }
+
+                                            for (i = 0; i < arrURLParams.length; i++)
+                                            {
+                                                if (arrParamNames[i] == paramName)
+                                                {
+                                                    //alert("Parameter:" + arrParamValues[i]);
+                                                    return arrParamValues[i];
+                                                }
+                                            }
+                                            return "No Parameters Found";
+                                        }
+                                    }
+
+
+
+        </script>
+        <script type="text/javascript" >
+            $(function () {
+                console.log(getURLParameters("text"));
+                if(getURLParameters("text")!=""){
+                    $('#show-image-record').html(getURLParameters("text"));
+                }else{
+                    $('#show-image-record').html('<img src="images/'+getURLParameters("folder")+'/'+getURLParameters("img")+'.png" style="height:22px;">')
+                }
+
+                setActiveSound(getURLParameters("folder"), getURLParameters("file"));
+
+            });
+        </script>
+
+
+    </body>
+</html>

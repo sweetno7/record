@@ -1,0 +1,311 @@
+<html><head>
+        <title>g'Lish Media Player</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="vender/node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="vender/johndyer-mediaelement/build/mediaelementplayer.min.css">
+        <link rel="stylesheet" type="text/css" href="vender/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/modal-header.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body onload="init('vowels',8);">
+        <!-- Main container -->
+        <div class="wrapper">
+            <nav class="navbar navbar-default navbar-custom ">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <h3 class=" text-danger">Practice Vowels Sound 8</h3>
+                    </div>
+                </div>
+            </nav>
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="panel">
+                                <div class="panel-body text-center">
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <video controls="" class="embed-responsive-item  text-center" id="mediaplayer">
+                                            <source class="embed-responsive-item" src="media/video/08_Vowels_7_ezh.mp4" type="video/mp4">Your browser does not support HTML5 video.</video>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-success">
+                                <div class="panel-heading ">
+                                    <!--<button type="button" class="btn btn-primary btn-md">SENTENCE</button>-->
+                                    <strong>
+                                        SENTENCE
+                                    </strong>
+                                </div>
+                                <div class="panel-body">
+                                    <p>
+                                        <button type="button" class="btn btn-sm btn-success" id="sv1" onclick="playSound('vs81')">
+                                            <i class="glyphicon glyphicon-volume-up"></i>
+                                        </button>
+                                        <!-- <button type="button" class="btn btn-sm btn-danger" id="spv1" onclick="openPopup('Vowels1','vs11','v1')"  data-toggle="modal" data-target="#sound-box"> -->
+                                        <button type="button" class="btn btn-sm btn-danger" id="spv1" onclick="openPopup('Vowels8', 'vs81', 'Sue is a very nice girl.','')">
+                                            <i class="fa fa-microphone"></i>
+                                        </button>&nbsp;Sue is a very nice girl.</p>
+                                    <p>
+                                        <button type="button" class="btn btn-sm btn-success" id="sv2" onclick="playSound('vs82')">
+                                            <i class="glyphicon glyphicon-volume-up"></i>
+                                        </button>
+                                        <!--<button type="button" class="btn btn-sm btn-danger" id="spv2" onclick="openPopup('Vowels1', 'vs12', 'v1')"  data-toggle="modal" data-target="#sound-box">-->
+                                        <button type="button" class="btn btn-sm btn-danger" id="spv2" onclick="openPopup('Vowels8', 'vs82', 'I need to sew a button on my shirt.','')" >
+                                            <i class="fa fa-microphone"></i>
+                                        </button>&nbsp;I need to sew a button on my shirt.</p>
+                                    <p>
+                                        <button type="button" class="btn btn-sm btn-success" id="sv3" onclick="playSound('vs83')">
+                                            <i class="glyphicon glyphicon-volume-up"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-sm btn-danger" id="spv3" onclick="openPopup('Vowels8', 'vs83', 'It’s Zak’s birthday next week.','')"  data-toggle="modal" data-target="#sound-box">
+                                            <i class="fa fa-microphone"></i>
+                                        </button>&nbsp;It’s Zak’s birthday next week.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <!--<button type="button" class="btn btn-primary btn-md"></button>-->
+                                    <strong> INTRODUCTION   </strong>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-xs-6">
+                                          <p>This sound is the long form of the schwa sound.
+                        <br>The mouth is relaxed and lips are neutral.
+                        <br>
+                        <br>It is found in words like thirteen and bird.
+                                                <button type="button" class="btn btn-sm btn-success" id="exv1" onclick="playSound('ex8')">
+                                                    <i class="fa fa-2x fa-volume-up" aria-hidden="true"></i>
+                                                </button>
+                                            </p>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <img src="images/vowelstonuge8.png" class="center-block" style="width: 50%;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+                                    <!--<button type="button" class="btn btn-primary btn-md"></button>-->
+                                    <strong> WORD LIST</strong>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <p>
+                                                <img src="images/Vowels8/v1.png" class="word-list" >
+                                            </p>
+                                            <p>
+                                                <button type="button" class="btn btn-sm btn-success" id="pracv1" onclick="playSound('01Early')">
+                                                    <i class="glyphicon glyphicon-volume-up"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-sm btn-danger" id="spv1" onclick="openPopup('Vowels8', '01Early', '','v1')">
+                                                    <i class="fa fa-microphone"></i>
+                                                </button>
+                                            </p>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <p>
+                                                <img src="images/Vowels8/v2.png" class="word-list" >
+                                            </p>
+                                            <p>
+                                                <button type="button" class="btn btn-sm btn-success" id="pracv2" onclick="playSound('02First')">
+                                                    <i class="glyphicon glyphicon-volume-up"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-sm btn-danger" id="spv1" onclick="openPopup('Vowels8', '02First', '','v2')"  data-toggle="modal" data-target="#sound-box">
+                                                    <i class="fa fa-microphone"></i>
+                                                </button>
+                                            </p>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <p>
+                                                <img src="images/Vowels8/v3.png" class="word-list" >
+                                            </p>
+                                            <p>
+                                                <button type="button" class="btn btn-sm btn-success" id="pracv3" onclick="playSound('03Work')">
+                                                    <i class="glyphicon glyphicon-volume-up"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-sm btn-danger" id="spv1" onclick="openPopup('Vowels8', '03Work', '','v3')"  data-toggle="modal" data-target="#sound-box">
+                                                    <i class="fa fa-microphone"></i>
+                                                </button>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <p>
+                                                <img src="images/Vowels8/v4.png" class="word-list" >
+                                            </p>
+                                            <p>
+                                                <button type="button" class="btn btn-sm btn-success" id="pracv4" onclick="playSound('04Third')">
+                                                    <i class="glyphicon glyphicon-volume-up"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-sm btn-danger" id="spv1" onclick="openPopup('Vowels8', '04Third', '','v4')"  data-toggle="modal" data-target="#sound-box">
+                                                    <i class="fa fa-microphone"></i>
+                                                </button>
+                                            </p>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <p>
+                                                <img src="images/Vowels8/v5.png" class="word-list" >
+                                            </p>
+                                            <p>
+                                                <button type="button" class="btn btn-sm btn-success" id="pracv5" onclick="playSound('05Worse')">
+                                                    <i class="glyphicon glyphicon-volume-up"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-sm btn-danger" id="spv1" onclick="openPopup('Vowels8', '05Worse', '','v5')"  data-toggle="modal" data-target="#sound-box">
+                                                    <i class="fa fa-microphone"></i>
+                                                </button>
+                                            </p>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <p>
+                                                <img src="images/Vowels8/v6.png" class="word-list" >
+                                            </p>
+                                            <p>
+                                                <button type="button" class="btn btn-sm btn-success" id="pracv6" onclick="playSound('06Hurt')">
+                                                    <i class="glyphicon glyphicon-volume-up"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-sm btn-danger" id="spv1" onclick="openPopup('Vowels8', '06Hurt', '','v6')"  data-toggle="modal" data-target="#sound-box">
+                                                    <i class="fa fa-microphone"></i>
+                                                </button>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <p>
+                                                <img src="images/Vowels8/v7.png" class="word-list" >
+                                            </p>
+                                            <p>
+                                                <button type="button" class="btn btn-sm btn-success" id="pracv7" onclick="playSound('07Girls')">
+                                                    <i class="glyphicon glyphicon-volume-up"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-sm btn-danger" id="spv1" onclick="openPopup('Vowels8', '07Girls', '','v7')"  data-toggle="modal" data-target="#sound-box">
+                                                    <i class="fa fa-microphone"></i>
+                                                </button>
+                                            </p>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <p>
+                                                <img src="images/Vowels8/v8.png" class="word-list" >
+                                            </p>
+                                            <p>
+                                                <button type="button" class="btn btn-sm btn-success" id="pracv8" onclick="playSound('08heard-herd')">
+                                                    <i class="glyphicon glyphicon-volume-up"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-sm btn-danger" id="spv1" onclick="openPopup('Vowels8', '08heard-herd', '','v8')"  data-toggle="modal" data-target="#sound-box">
+                                                    <i class="fa fa-microphone"></i>
+                                                </button>
+                                            </p>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <p>
+                                                <img src="images/Vowels8/v9.png" class="word-list" >
+                                            </p>
+                                            <p>
+                                                <button type="button" class="btn btn-sm btn-success" id="pracv9" onclick="playSound('09learning')">
+                                                    <i class="glyphicon glyphicon-volume-up"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-sm btn-danger" id="spv1" onclick="openPopup('Vowels8', '09learning', '','v9')"  data-toggle="modal" data-target="#sound-box">
+                                                    <i class="fa fa-microphone"></i>
+                                                </button>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-4">
+                                            <p>
+                                                <img src="images/Vowels8/v10.png" class="word-list" >
+                                            </p>
+                                            <p>
+                                                <button type="button" class="btn btn-sm btn-success" id="pracv10" onclick="playSound('10Furniture')">
+                                                    <i class="glyphicon glyphicon-volume-up"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-sm btn-danger" id="spv1" onclick="openPopup('Vowels8', '10Furniture', '','v10')"  data-toggle="modal" data-target="#sound-box">
+                                                    <i class="fa fa-microphone"></i>
+                                                </button>
+                                            </p>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <p>
+                                                <img src="images/Vowels8/v11.png" class="word-list" >
+                                            </p>
+                                            <p>
+                                                <button type="button" class="btn btn-sm btn-success" id="pracv11" onclick="playSound('11Birthday')">
+                                                    <i class="glyphicon glyphicon-volume-up"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-sm btn-danger" id="spv1" onclick="openPopup('Vowels8', '11Birthday', '','v11')"  data-toggle="modal" data-target="#sound-box">
+                                                    <i class="fa fa-microphone"></i>
+                                                </button>
+                                            </p>
+                                        </div>
+                                        <div class="col-xs-4">
+                                            <p>
+                                                <img src="images/Vowels8/v12.png" class="word-list" >
+                                            </p>
+                                            <p>
+                                                <button type="button" class="btn btn-sm btn-success" id="pracv12" onclick="playSound('12Personal')">
+                                                    <i class="glyphicon glyphicon-volume-up"></i>
+                                                </button>
+                                                <button type="button" class="btn btn-sm btn-danger" id="spv1" onclick="openPopup('Vowels8', '12Personal', '','v12')"  data-toggle="modal" data-target="#sound-box">
+                                                    <i class="fa fa-microphone"></i>
+                                                </button>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="showaudio"></div>
+
+            <script type="text/javascript" src="vender/node_modules/jquery/dist/jquery.min.js"></script>
+            <script type="text/javascript" src="vender/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+            <script type="text/javascript" src="vender/johndyer-mediaelement/build/mediaelementplayer.min.js"></script>
+            <script type="text/javascript" src="js/app.script.js"></script>
+
+            <script type="text/javascript" >
+                                                    function PopupCenter(url, title, w, h) {
+                                                        // Fixes dual-screen position                         Most browsers      Firefox
+                                                        var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
+                                                        var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
+
+                                                        var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
+                                                        var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
+
+                                                        var left = ((width / 2) - (w / 2)) + dualScreenLeft;
+                                                        var top = ((height / 2) - (h / 2)) + dualScreenTop;
+                                                        var newWindow = window.open(url, title, 'location=0,status=0,menubar=0,scrollbars=0,resizable=0, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);
+                                                        // console.log(newWindow);
+                                                        // Puts focus on the newWindow
+                                                        if (window.focus) {
+                                                            newWindow.focus();
+                                                        }
+                                                    }
+
+                                                    function openPopup(sound, file, text, img) {
+                                                        PopupCenter('record_popup.html?folder=' + sound.toLowerCase() + '&file=' + file.toLowerCase() + '&text=' + text.toLowerCase() + '&img=' + img.toLowerCase() + '', 'Sound Record', '650', '250');
+
+                                                    }
+                                                    $(function () {
+                                                        $('#mediaplayer').mediaelementplayer({
+                                                            pluginPath: "/path/to/shims/",
+                                                            success: function (mediaElement, originalNode) {
+                                                                // do things
+                                                            }
+                                                        });
+                                                    });
+            </script>
+        </div>
+
+
+    </body>
+</html>

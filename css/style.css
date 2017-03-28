@@ -1,0 +1,13 @@
+.wrapper{
+    background-color: #F6F6F6;
+}
+.navbar-custom {
+    /*color: #FFFFFF;*/
+    background-color: #FFFFFF;
+}
+.word-list{
+    height:18px;
+}
+canvas{
+    display: block;
+}

@@ -1,0 +1,12 @@
+audio/ vowels (เปลี่ยนเป็ฯตัวเลขทั้งหมด)
+vowels1 08decide
+vowels3 04should 06wouldnt 09push 11pull 12classroom
+vowels4 01afternoon 02roots 04fruit 05beautiful 06suit 07new 09university 10true 11future 12choose
+vowels5 01step 02any 04many 06eleven 07letter 08again 09address
+vowels6 01exactly 02imagine 03cat 04cabbage  06splash 07animal 08traffic_jam 09fashion 10understand
+vowels7 ทุกคำ
+vowels8 01early 02first 03work 04third 05worse 06hurt 07girls 10furniture 11birthday 12personal
+vowels9 ทุกคำ
+vowels10 ทุกคำ
+vowels11 ทุกคำ
+vowels12 ทุกคำ
